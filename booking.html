@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Bus | TripTide</title>
+  <link rel="stylesheet" href="TripTide.css">
+  <style>
+    body { font-family: 'Times New Roman', Times, serif; padding: 20px; }
+  </style>
+</head>
+<body>
+  
+
+  <!-- Paste your entire <form> section here -->
+
+           <section class="search-form">
+        <h2>PLAN YOUR RIDE TODAY AND NOW!!!!</h2>
+        <form action="submit.php" method="POST" enctype="multipart/form-data">
+
+            <label for="PASSENGER-NAME">FULL NAME:</label>
+            <input type="text" id="PASSENGER-NAME" name="full_name" placeholder="ENTER YOUR FULL NAME:" required><br><br>
+
+            <label for="SERVICE-TYPE">SERVICE TYPE:</label>
+            <select name="service_type" id="SERVICE-TYPE" required>
+                <option value="">CHOOSE YOUR SERVICE TYPE:</option>
+                <option value="SEAT">BOOK A SEAT</option>
+                <option value="Hire">HIRE A BUS</option>
+                <option value="Dropping">FA ME KO NTEM (DROPPING):</option>
+            </select><br><br>
+
+            <label for="busType">SELECT BUS TYPE:</label>
+            <select name="bus_type" id="busType" required>
+  <option value="" disabled selected>-- SELECT YOUR PREFERRED BUS --</option>
+  <option value="standard">Book a Standard</option>
+  <option value="vip">Book a VIP Bus</option>
+  <option value="minibus">Book a Minibus</option>
+  <option value="metroMass">Book a Metro Mass</option>
+  <option value="sprinter">Book a Sprinter</option>
+  <option value="trotro">Book a Trotro</option>
+</select>
+           <br><br>
+
+            <label for="from-location">FROM:</label>
+            <select id="from-location" name="from_location" required>
+                <option value="" disabled selected>SELECT DEPARTURE CITY</option>
+                <optgroup label="UPPER EAST REGION">
+            <option value="BAWKU">BAWKU</option>
+            <option value="ZEBELLA">ZEBELLA</option>
+            <option value="BOLGATANGA ">BOLGATANGA</option>
+            <option value="NAVRONGO">NAVRONGO</option>
+            <option value="PAGA">PAGA</option>
+            <option value="FUNBISI">FUNBISI</option>
+            <option value="SANDEMA">SANDEMA</option>
+        </optgroup>
+
+        <optgroup label="UPPER WEST REGION">
+            <option value="WA">WA</option>
+            <option value="TUMU">TUMU</option>
+            <option value="NANDOM">NANDOM</option>
+            <option value="LAWRA">LAWRA</option>
+            <option value="JIRAPA">JIRAPA</option>
+            <option value="HAMILE">HAMILE</option>
+        </optgroup>
+
+    
+<optgroup label="NORTH EAST REGION">
+            <option value="NALERIGU">NALERIGU</option>
+            <option value="WALEWALE">WALEWALE</option>
+            <option value="GAMBAGA">GAMBAGA</option>
+            <option value="BUNKPURUGU">BUNKPURUGU</option>
+            <option value="CHEREPONI">CHEREPONI</option>
+        </optgroup>
+
+        <optgroup label="SAVANNAH REGION">
+            <option value="DAMONGO">DAMONGO</option>
+            <option value="BOLE">BOLE</option>
+            <option value="SAWLA">SAWLA</option>
+            <option value="SALAGA">SALAGA</option>
+            <option value="DABOYA">DABOYA</option>
+            <option value="TUNA">TUNA</option>
+        </optgroup>
+
+        <optgroup label="NORTHERN REGION">
+            <option value="TAMALE">TAMALE</option>
+            <option value="YENDI">YENDI</option>
+            <option value="SAVELUGU">BOLE</option>
+            <option value="GUSHEGU">GUSHEGU</option>
+            <option value="TOLON">TOLON</option>
+        </optgroup>
+
+         <optgroup label="BONO REGION">
+            <option value="SUNYANI">SUNYANI</option>
+            <option value="DORMAA">DORMAA</option>
+            <option value="BREKUM">BREKUM</option>
+            <option value="WENCHI">WENCHI</option>
+        </optgroup>
+
+        <optgroup label="BONO EAST REGION">
+            <option value="TECHIMAN">TECHIMAN</option>
+            <option value="NKRANZA">NKRANZA</option>
+            <option value="ATEBUBU">ATEBUBU</option>
+            <option value="YEJI">YEJI</option>
+            <option value="KWAME DANSO">KWAME DANSO</option>
+        </optgroup>
+
+         <optgroup label="AHAFO REGION">
+            <option value="GOASO">GOASO</option>
+            <option value="BECHEM">BECHEM</option>
+            <option value="KENYASI">KENYASI</option>
+            <option value="HWIDIEM">HWIDIEM</option>
+            <option value="DUAYAW NKWANTA">KWAME DANSO</option>
+        </optgroup>
+       
+        <optgroup label="ASANTE REGION">
+            <option value="KUMASI">KUMASI</option>
+            <option value="TEPA">TEPA</option>
+            <option value="EJISU">EJISU</option>
+            <option value="MANPONG">MANPONG</option>
+            <option value="KONONGO">KONONGO</option>
+            <option value="BEKWAI">BEKWAI</option>
+            <option value="AGOGO">AGOGO</option>
+        </optgroup>
+
+        <optgroup label="OTI REGION">
+            <option value="DAMDAI">DAMDAI</option>
+            <option value="NKWANTA">NKWANTA</option>
+            <option value="KADJEBI">KADJEBI</option>
+            <option value="JASIKAN">JASIKAN</option>
+            <option value="KRACHI">KRACHI</option>
+            <option value="KPASSA">KPASSA</option>
+        </optgroup>
+
+         <optgroup label="CENTRAL REGION">
+            <option value="CAPE COAST">CAPE COAST</option>
+            <option value="WINNEBA">WINNEBA</option>
+            <option value="MANKESSIM">MANKESSIM</option>
+            <option value="ASSIN FOSU">ASSIN FOSU</option>
+            <option value="ELMINA">ELMINA</option>
+            <option value="AGONA SWEDRU">AGONA SWEDRU</option>
+        </optgroup>
+
+
+        <optgroup label="EASTERN REGION">
+            <option value="KOFORIDUA">KOFORIDUA</option>
+            <option value="NKWAKAW">NKWAKAW</option>
+            <option value="AKIM ODA">AKIM ODA</option>
+            <option value="NSAWAM">NSAWAM</option>
+            <option value="SUHUM">SUHUM</option>
+            <option value="ABURI">ABURI</option>
+            <option value="MPAESO">MPAESO</option>
+        </optgroup>
+
+
+        <optgroup label="WESTERN REGION">
+            <option value="TAKORADI">TAKORADI</option>
+            <option value="TARKWA">TARKWA</option>
+            <option value="AXIM">AXIM</option>
+            <option value="BOGOSO">BOGOSO</option>
+            <option value="ASANKRANGWA">ASANKRANGWA</option>
+            <option value="SAMREBOI">SAMREBOI</option>
+            <option value="PRESTEA">PRESTEA</option>
+            <option value="SHAMA">SHAMA</option>
+        </optgroup>
+
+         <optgroup label="WESTERN NORTH REGION">
+            <option value="WIAWSO">WIAWSO</option>
+            <option value="BIBIANI">BIBIANI</option>
+            <option value="SEFWI BEKWAI">SEFWI BEKWAI</option>
+            <option value="AKONTOMBRA">AKONTOMBRA</option>
+            <option value="JUABOSO">JUABOSO</option>
+        </optgroup>
+
+         <optgroup label="VOLTA REGION">
+            <option value="HO">HO</option>
+            <option value="KETA">KETA</option>
+            <option value="AFLAO">AFLAO</option>
+            <option value="HOHOE">HOHOE</option>
+            <option value="AKATSI">AKATSI</option>
+            <option value="DZODZE">DZODZE</option>
+        </optgroup>
+
+        <optgroup label="GREATER ACCRA">
+            <option value="ACCRA">ACCRA</option>
+            <option value="CIRCLE ">CIRCLE</option>
+            <option value="MADINA">MADINA</option>
+            <option value="KASOA">KASUA</option>
+            <option value="TEMA">TEMA</option>
+            <option value="ADENTA">ADENTA</option>
+            <option value="TESHIE">TESHIE</option>
+            <option value="NUNGUA">NUNGUA</option>
+            <option value="ASHAIMAN">ASHAIMAN</option>
+        </optgroup>
+            </select><br><br>
+
+            <label for="TO-LOCATION">TO:</label>
+            <select id="TO-LOCATION" name="to_location" required>
+                <option value="" disabled selected>SELECT DESTINATION CITY</option>
+                <optgroup label="UPPER EAST REGION">
+            <option value="BAWKU">BAWKU</option>
+            <option value="ZEBELLA">ZEBELLA</option>
+            <option value="BOLGATANGA ">BOLGATANGA</option>
+            <option value="NAVRONGO">NAVRONGO</option>
+            <option value="PAGA">PAGA</option>
+            <option value="FUNBISI">FUNBISI</option>
+            <option value="SANDEMA">SANDEMA</option>
+        </optgroup>
+
+        <optgroup label="UPPER WEST REGION">
+            <option value="WA">WA</option>
+            <option value="TUMU">TUMU</option>
+            <option value="NANDOM">NANDOM</option>
+            <option value="LAWRA">LAWRA</option>
+            <option value="JIRAPA">JIRAPA</option>
+            <option value="HAMILE">HAMILE</option>
+        </optgroup>
+
+    
+<optgroup label="NORTH EAST REGION">
+            <option value="NALERIGU">NALERIGU</option>
+            <option value="WALEWALE">WALEWALE</option>
+            <option value="GAMBAGA">GAMBAGA</option>
+            <option value="BUNKPURUGU">BUNKPURUGU</option>
+            <option value="CHEREPONI">CHEREPONI</option>
+        </optgroup>
+
+        <optgroup label="SAVANNAH REGION">
+            <option value="DAMONGO">DAMONGO</option>
+            <option value="BOLE">BOLE</option>
+            <option value="SAWLA">SAWLA</option>
+            <option value="SALAGA">SALAGA</option>
+            <option value="DABOYA">DABOYA</option>
+            <option value="TUNA">TUNA</option>
+        </optgroup>
+
+        <optgroup label="NORTHERN REGION">
+            <option value="TAMALE">TAMALE</option>
+            <option value="YENDI">YENDI</option>
+            <option value="SAVELUGU">BOLE</option>
+            <option value="GUSHEGU">GUSHEGU</option>
+            <option value="TOLON">TOLON</option>
+        </optgroup>
+
+         <optgroup label="BONO REGION">
+            <option value="SUNYANI">SUNYANI</option>
+            <option value="DORMAA">DORMAA</option>
+            <option value="BREKUM">BREKUM</option>
+            <option value="WENCHI">WENCHI</option>
+        </optgroup>
+
+        <optgroup label="BONO EAST REGION">
+            <option value="TECHIMAN">TECHIMAN</option>
+            <option value="NKRANZA">NKRANZA</option>
+            <option value="ATEBUBU">ATEBUBU</option>
+            <option value="YEJI">YEJI</option>
+            <option value="KWAME DANSO">KWAME DANSO</option>
+        </optgroup>
+
+         <optgroup label="AHAFO REGION">
+            <option value="GOASO">GOASO</option>
+            <option value="BECHEM">BECHEM</option>
+            <option value="KENYASI">KENYASI</option>
+            <option value="HWIDIEM">HWIDIEM</option>
+            <option value="DUAYAW NKWANTA">KWAME DANSO</option>
+        </optgroup>
+       
+        <optgroup label="ASANTE REGION">
+            <option value="KUMASI">KUMASI</option>
+            <option value="TEPA">TEPA</option>
+            <option value="EJISU">EJISU</option>
+            <option value="MANPONG">MANPONG</option>
+            <option value="KONONGO">KONONGO</option>
+            <option value="BEKWAI">BEKWAI</option>
+            <option value="AGOGO">AGOGO</option>
+        </optgroup>
+
+        <optgroup label="OTI REGION">
+            <option value="DAMDAI">DAMDAI</option>
+            <option value="NKWANTA">NKWANTA</option>
+            <option value="KADJEBI">KADJEBI</option>
+            <option value="JASIKAN">JASIKAN</option>
+            <option value="KRACHI">KRACHI</option>
+            <option value="KPASSA">KPASSA</option>
+        </optgroup>
+
+         <optgroup label="CENTRAL REGION">
+            <option value="CAPE COAST">CAPE COAST</option>
+            <option value="WINNEBA">WINNEBA</option>
+            <option value="MANKESSIM">MANKESSIM</option>
+            <option value="ASSIN FOSU">ASSIN FOSU</option>
+            <option value="ELMINA">ELMINA</option>
+            <option value="AGONA SWEDRU">AGONA SWEDRU</option>
+        </optgroup>
+
+
+        <optgroup label="EASTERN REGION">
+            <option value="KOFORIDUA">KOFORIDUA</option>
+            <option value="NKWAKAW">NKWAKAW</option>
+            <option value="AKIM ODA">AKIM ODA</option>
+            <option value="NSAWAM">NSAWAM</option>
+            <option value="SUHUM">SUHUM</option>
+            <option value="ABURI">ABURI</option>
+            <option value="MPAESO">MPAESO</option>
+        </optgroup>
+
+
+        <optgroup label="WESTERN REGION">
+            <option value="TAKORADI">TAKORADI</option>
+            <option value="TARKWA">TARKWA</option>
+            <option value="AXIM">AXIM</option>
+            <option value="BOGOSO">BOGOSO</option>
+            <option value="ASANKRANGWA">ASANKRANGWA</option>
+            <option value="SAMREBOI">SAMREBOI</option>
+            <option value="PRESTEA">PRESTEA</option>
+            <option value="SHAMA">SHAMA</option>
+        </optgroup>
+
+         <optgroup label="WESTERN NORTH REGION">
+            <option value="WIAWSO">WIAWSO</option>
+            <option value="BIBIANI">BIBIANI</option>
+            <option value="SEFWI BEKWAI">SEFWI BEKWAI</option>
+            <option value="AKONTOMBRA">AKONTOMBRA</option>
+            <option value="JUABOSO">JUABOSO</option>
+        </optgroup>
+
+         <optgroup label="VOLTA REGION">
+            <option value="HO">HO</option>
+            <option value="KETA">KETA</option>
+            <option value="AFLAO">AFLAO</option>
+            <option value="HOHOE">HOHOE</option>
+            <option value="AKATSI">AKATSI</option>
+            <option value="DZODZE">DZODZE</option>
+        </optgroup>
+
+        <optgroup label="GREATER ACCRA">
+            <option value="ACCRA">ACCRA</option>
+            <option value="CIRCLE ">CIRCLE</option>
+            <option value="MADINA">MADINA</option>
+            <option value="KASUA">KASUA</option>
+            <option value="TEMA">TEMA</option>
+            <option value="ADENTA">ADENTA</option>
+            <option value="TESHIE">TESHIE</option>
+            <option value="NUNGUA">NUNGUA</option>
+            <option value="ASHAIMAN">ASHAIMAN</option>
+        </optgroup>
+            </select><br><br>
+
+            <label for="TAKE-OFF-DATE">TAKE OFF DATE:</label>
+<input type="date" id="TAKE-OFF-DATE" name="take_off_date" required>
+
+ 
+             <label for="PASSENGER-CONTACT">CONTACT:</label>
+            <input type="number" id="PASSENGER-CONTACT" name="contact" placeholder="CONTACT:" required>
+
+
+            <label for="PHOTO">UPLOAD A PHOTO:</label>
+            <input type="file" id="PHOTO" name="photo" accept="image/*" capture="user" onchange="previewPhoto()"><br><br>
+            <img id="preview" style="max-width: 100px; margin-top: 10px;"><br><br>
+          
+            <fieldset>
+         <label for="payment">Payment Method:</label>
+<select id="payment" name="payment_method" required>
+  <option value="Mobile Money">Mobile Money</option>
+  <option value="Credit Card">Credit Card</option>
+  <option value="Cash">Cash</option>
+</select>
+  </fieldset><br>
+
+            <button type="submit">BOOK NOW</button>
+        </form>
+    </section>
+    
+  <footer>
+    <p>&copy; 2025 SUNYANI Bus TripTide</p>
+  </footer>
+
+  <script>
+    function previewPhoto() {
+      const file = document.getElementById('PHOTO').files[0];
+      const preview = document.getElementById('preview');
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          preview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
+</body>
+</html>

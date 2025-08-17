@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunyani Bus Booking TripTide</title>
+    <link rel="stylesheet" href="TripTide.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>TripTide Bus Booking</h1>
+        <section class="main-menu">
+            <h2>Explore TripTide</h2>
+            <nav>
+                <ul>
+                    <li><a href="booking.html">Search Buses</a></li>
+                    <li><a href="view_bookings.php">My Bookings</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="comment.html">Leave a Comment</a></li> 
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <section class="PASSENGER">
+        <h2>Book your Ride with Pride</h2>
+        <p>Skip the long and standing queues, grab your seat at the comfort of your homes and offices , and take off!</p>
+        <a href="booking.html" class="cta-button">SEARCH BUSES</a>
+    </section>
+
+    <section class="WHATFOR">
+        <div>
+            <h3>Fast and simple booking</h3>
+            <p>Book a Seat(s), Hire a Bus/Buses, Dropping.</p>
+        </div>
+        <div>
+            <h3>Payment Option</h3>
+            <p>Pay via: BANK, MOMO, PHYSICAL CASH at the stations.</p>
+        </div>
+    </section>
+
+    
+    <section class="COMMENT-PROMPT">
+        <h3>We’d love to hear from you!</h3>
+        <p>Share your thoughts, feedback, or suggestions to help us improve.</p>
+        <a href="comment.html" class="cta-button">📝 Leave a Comment</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SUNYANI Bus TripTide</p>
+    </footer>
+
+    
+    <script>
+        function showInfo(type) {
+            const infoBox = document.getElementById('info-box');
+            let content = '';
+
+            switch(type) {
+                case 'search':
+                    content = '<h3>Search Buses</h3><p>Find available buses for your route and book instantly.</p>';
+                    break;
+                case 'bookings':
+                    content = '<h3>My Bookings</h3><p>View and manage your previous bookings here.</p>';
+                    break;
+                case 'contact':
+                    content = '<h3>Contact Us</h3><p>Reach out via email, phone, or visit our station offices.</p>';
+                    break;
+                case 'comment':
+                    content = '<h3>Leave a Comment</h3><p>Share your feedback and help us improve your experience.</p>';
+                    break;
+                default:
+                    content = '<p>Select an option to view details.</p>';
+            }
+
+            infoBox.innerHTML = content;
+        }
+    </script>
+
+    
+    <script>
+        function previewPhoto() {
+            const file = document.getElementById('PHOTO').files[0];
+            const preview = document.getElementById('preview');
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>

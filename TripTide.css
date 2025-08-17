@@ -1,0 +1,401 @@
+body {
+    background-image: url('pic2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background: size auto 0.5px;;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+  position: relative;
+  background-image: url('pic4.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 0;
+}
+
+header h1, header nav {
+  position: relative;
+  z-index: 1;
+}
+
+.main-menu {
+  background-color: #f8f8f8; /* Light background */
+  padding: 40px;
+  text-align: center;
+  color: #4B0082; /* Indigo or any color you prefer */
+}
+
+.main-menu h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: maroon; /* Change heading color */
+}
+
+.main-menu nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main-menu nav li a {
+  text-decoration: none;
+  color: darkgreen; /* Change link color */
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #e0e0e0; /* Light button background */
+  transition: background-color 0.3s;
+}
+
+.main-menu nav li a:hover {
+  background-color: #c0c0c0; /* Hover effect */
+  color: black;
+}
+
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+nav li a:hover {
+  background-color: rgba(255, 255, 255, );
+}
+
+
+.PASSENGER {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.PASSENGER div {
+  flex: 0 1 300px;            /* Fixed width, no growing */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.PASSENGER h2 {
+  width: 100%;
+  font-size: 28px;
+  color: maroon;
+  margin-bottom: 20px;
+}
+
+.PASSENGER p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #005f99;
+}
+
+
+
+/* WHATFOR section */
+.WHATFOR {
+  display: flex;
+  justify-content: center;       /* Center items horizontally */
+  flex-wrap: wrap;
+  gap: 20px;                     /* Space between boxes */
+  padding: 40px;
+  max-width: 1000px;
+  margin: 0 auto;                /* Center the whole section */
+}
+
+
+.WHATFOR h3 {
+  color: maroon;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.WHATFOR p {
+  font-size: 16px;
+  color: #333;
+}
+
+
+.WHATFOR div {
+  flex: 1 1 300px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+/* Form section */
+.search-form {
+    background-color: #fff;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-form h2 {
+    text-align: center;
+}
+
+.search-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.search-form input,
+.search-form select {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+}
+.main-menu li {
+  margin: 10px 0;
+}
+.main-menu a {
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+}
+#comment-box {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+#comment-box input, #comment-box textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+
+button[type="submit"]:hover {
+    background-color: #005f99;
+}
+.confirmation-box {
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  padding: 20px;
+  max-width: 500px;
+  margin: 30px auto;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.confirmation-box h3 {
+  color: #2e8b57;
+}
+.confirmation-box button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.confirmation-box button:hover {
+  background: #246b45;
+}
+
+.booking-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 50px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.booking-container h2 {
+  color: #333;
+}
+
+.booking-container p {
+  color: #666;
+}
+
+.booking-container a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: #c3c6c9;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.booking-container a:hover {
+  background-color: #0056b3;
+}
+/* === Scoped Comment Page Styling === */
+
+.comment-page {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    color: #333;
+}
+
+.comment-page h1 {
+    text-align: center;
+    color: #fcf9f9f8;
+    margin-bottom: 10px;
+}
+
+
+
+.comment-page form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.comment-page label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.comment-page input[type="text"],
+.comment-page textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.comment-page textarea {
+    resize: vertical;
+}
+
+.comment-page button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-page button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #98b3cf;
+    color: white;
+    margin-top: 26px;
+}
+
